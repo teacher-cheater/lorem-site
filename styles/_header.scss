@@ -21,7 +21,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
     position: fixed;
     background-color: $bg-quaternary-color;
     width: 100vw;
@@ -46,7 +46,7 @@
   // .header__link
   &__link {
     color: $secondary-color;
-    font-size: 32px;
+    font-size: 22px;
 
     text-transform: uppercase;
     &_active {

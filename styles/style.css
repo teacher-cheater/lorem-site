@@ -67,25 +67,25 @@ body {
 .header__list {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   position: fixed;
   background-color: rgba(16, 16, 29, 0.8980392157);
   width: 100vw;
   position: fixed;
   left: 0;
   right: 0;
-  top: -100%;
+  top: -150%;
   align-items: center;
   justify-content: center;
   height: 100vh;
   transition: all 0.3s ease;
 }
 .header__list._open-burger {
-  top: 85px;
+  top: 80px;
 }
 .header__link {
   color: #fff;
-  font-size: 32px;
+  font-size: 22px;
   text-transform: uppercase;
 }
 .header__link_active {
@@ -191,6 +191,7 @@ body {
 }
 .main-info__more-details {
   border: 1px solid #6f6d7b;
+  color: #272733;
 }
 
 .placing-an-order {
@@ -743,6 +744,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8509803922);
   padding: 12px 35.52px 12px 10px;
   font-size: 18px;
+  color: #272733;
 }
 .dropdown-items__btn::before {
   content: "";
@@ -787,9 +789,9 @@ body {
   height: 10px;
 }
 .dropdown-items__list::-webkit-scrollbar-button, .dropdown-items__list::-webkit-scrollbar-button:single-button, .dropdown-items__list::-webkit-scrollbar-button:vertical:increment, .dropdown-items__list::-webkit-scrollbar-button:vertical:decrement, .dropdown-items__list::-webkit-scrollbar-button:horizontal:increment, .dropdown-items__list::-webkit-scrollbar-button:horizontal:decrement {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+  display: none;
+  width: 0;
+  height: 0;
 }
 .dropdown-items__list::-webkit-scrollbar-track {
   background: rgba(61, 64, 80, 0.8509803922);
