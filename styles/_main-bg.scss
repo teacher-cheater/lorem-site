@@ -1,0 +1,78 @@
+.main-info {
+  background: url("../assets/images/bg-main.webp") center / cover no-repeat;
+  height: 100vh;
+  padding: 200px 15px;
+  // .main-info__title
+  &__title {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    & span {
+      color: $accent-color;
+    }
+  }
+
+  // .main-info__text
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  // .main-info__list
+  &__list {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 60px;
+  }
+
+  // .main-info__item
+  &__item {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 5px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 1.51px;
+      background-color: $main-color;
+    }
+  }
+
+  // .main-info__buttons
+  &__buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__order,
+  &__more-details {
+    font-size: 13px;
+    border: 0;
+    background: none;
+    padding: 12px 24px;
+    min-width: 134px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  // .main-info__order
+  &__order {
+    color: $secondary-color;
+    background-color: $bg-secondary-color;
+    border: 1px solid $secondary-color;
+  }
+
+  // .main-info__more-details
+  &__more-details {
+    border: 1px solid $border-color;
+  }
+}

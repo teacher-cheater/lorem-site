@@ -1,0 +1,118 @@
+.dropdown-items {
+  &__content {
+    position: relative;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $text-color;
+    padding: 12px 35.52px 12px 10px;
+    font-size: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 65%;
+      right: 10px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      width: 9px;
+      height: 5.2px;
+      top: 50%;
+      right: 10.52px;
+      transform: translateY(-50%);
+      background: url("../assets/icons/arrow-down.svg") center / cover no-repeat;
+      pointer-events: none;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    &:focus {
+      outline: 1px solid $bg-color;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    text-align: left;
+    left: 0;
+    top: 0;
+    padding: 8px;
+    background: $main-color;
+    border: 1px solid $bg-color;
+    border-radius: 0 0 3px 3px;
+    overflow: auto;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    height: 228px;
+    transition: all 0.3s ease;
+
+    scrollbar-width: thin;
+    scrollbar-color: $accent-color $bg-color-active;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-button:single-button,
+    &::-webkit-scrollbar-button:vertical:increment,
+    &::-webkit-scrollbar-button:vertical:decrement,
+    &::-webkit-scrollbar-button:horizontal:increment,
+    &::-webkit-scrollbar-button:horizontal:decrement {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $bg-color-active;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $accent-color;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+
+      &:hover {
+        background: $bg-secondary-color;
+      }
+    }
+  }
+
+  &__item {
+    padding: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $secondary-color;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__list--visible {
+    opacity: 1;
+    z-index: 5;
+    top: 45px;
+    transition: all 0.3s ease;
+  }
+
+  &__btn--active {
+    outline: none;
+    border-radius: 3px 3px 0 0;
+    background-color: $bg-color-active;
+    color: $secondary-color;
+    &::before {
+      transform: translateY(-50%);
+      background: url("../assets/icons/arrow-top.svg") center / cover no-repeat;
+    }
+  }
+}
